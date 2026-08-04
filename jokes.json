@@ -1,0 +1,92 @@
+[
+  {
+    "id": "001",
+    "title": "The Humour Uncertainty Principle",
+    "text": "You can know how funny something is, or you can laugh at it — never both at once. The preservation law holds, though. The LOLness isn't destroyed. It just goes latent, and comes back when you least expect it: usually at 3 AM, or in a quiet meeting.",
+    "submittedBy": "The Management",
+    "base": 5,
+    "baseLabel": "Laugh",
+    "bonuses": [
+      { "label": "Originality", "value": "+1", "why": "Uncertainty jokes are common. Conservation of LOLness is not." },
+      { "label": "Relatable", "value": "+1", "why": "Everyone has been ambushed by a latent joke in a room where laughing was a bad idea." },
+      { "label": "Unexpected", "value": "+1", "why": "The pivot from uncertainty to conservation is the actual gag." }
+    ],
+    "note": "The specimen demonstrates its own thesis. It was measurably funnier before we measured it. Per its own preservation law, that LOLness is not gone — it is latent, and it will find you."
+  },
+  {
+    "id": "002",
+    "title": "Calibration Standard",
+    "text": "Why did the chicken cross the road? To get to the other side.",
+    "submittedBy": "Unattributed (pre-1847)",
+    "base": 1,
+    "baseLabel": "Smirk",
+    "bonuses": [],
+    "note": "Retained permanently as the Inspectorate's reference specimen. Every instrument requires a known quantity to calibrate against, and this one has not moved in one hundred and seventy years. Do not laugh at it. If you laugh at it, the instrument is broken and must be recertified."
+  },
+  {
+    "id": "003",
+    "title": "Terms of Service",
+    "text": "The Joke Regulation Authority has determined that explaining a joke does not violate it, but does void the warranty.",
+    "submittedBy": "Inspectorate of Satire, Internal Memo 12-B",
+    "base": 4,
+    "baseLabel": "Giggle",
+    "bonuses": [
+      { "label": "Originality", "value": "+1", "why": "Bureaucratic framing applied to an observation everyone already agrees with." },
+      { "label": "Unexpected", "value": "+1", "why": "'Void the warranty' arrives one clause later than you brace for." }
+    ],
+    "note": "Filed without objection. Claims made against explained jokes will not be honoured."
+  },
+  {
+    "id": "004",
+    "title": "Half-Life",
+    "text": "Every joke has a half-life. Puns decay fastest — they emit a groan and become a fact.",
+    "submittedBy": "The Management",
+    "base": 4,
+    "baseLabel": "Giggle",
+    "bonuses": [
+      { "label": "Originality", "value": "+1", "why": "The decay product is correctly identified. Puns really do become facts." },
+      { "label": "Unexpected", "value": "+1", "why": "'Emit a groan' is doing physics and comedy in the same three words." }
+    ],
+    "note": "Short, load-bearing, no wasted clause. The Inspectorate notes that this specimen has itself already decayed twice during review."
+  },
+  {
+    "id": "005",
+    "title": "Retention Schedule",
+    "text": "We classify jokes by how long they survive being repeated at work. Category A: forever. Category B: until Thursday. Category C: it was never funny, you were just tired.",
+    "submittedBy": "Inspectorate of Satire, Records Division",
+    "base": 5,
+    "baseLabel": "Laugh",
+    "bonuses": [
+      { "label": "Relatable", "value": "+1", "why": "Category C is a diagnosis, and the reader has been the patient." },
+      { "label": "Originality", "value": "+1", "why": "The taxonomy is the joke. The third category is where it turns on you." }
+    ],
+    "note": "The escalating-list structure is standard. The final item declining to be a joke at all is what earns the score."
+  },
+  {
+    "id": "006",
+    "title": "Chiasmus",
+    "text": "Comedy is tragedy plus time. Tragedy is comedy minus timing.",
+    "submittedBy": "The Management",
+    "base": 5,
+    "baseLabel": "Laugh",
+    "bonuses": [
+      { "label": "Originality", "value": "+1", "why": "The first half is inherited. The second half is the contribution, and it is a real one." },
+      { "label": "Unexpected", "value": "+1", "why": "Time and timing are one letter and an entire career apart." }
+    ],
+    "note": "The Inspectorate acknowledges the opening clause is not original and has elected not to penalise it, on the grounds that the reversal could not exist without it."
+  },
+  {
+    "id": "007",
+    "title": "The Satirical Uncertainty Principle",
+    "text": "A flamingo in a tweed jacket holds the J.R.A. Chair of Ironic Studies. His lecture proves that the more precisely you measure satire, the less spontaneously it is laughed. His mug reads I MEASURE, THEREFORE I MAYBE LAUGH. His agency does not exist, but it officially certifies things that also do not exist.",
+    "submittedBy": "Prof. F. L. Amingo, Ph.D.",
+    "base": 4,
+    "baseLabel": "Giggle",
+    "bonuses": [
+      { "label": "Visual Aid", "value": "+1", "why": "The flamingo is not decoration. The joke does not survive without the tweed." },
+      { "label": "Originality", "value": "+1", "why": "Four layers of meta held together by a bird with reading glasses." },
+      { "label": "Unexpected", "value": "+1", "why": "The mug. Every time, the mug." }
+    ],
+    "note": "Certifying nonexistent things through a nonexistent agency is the founding act of this institution. Specimen 007 is therefore both evidence and jurisdiction."
+  }
+]

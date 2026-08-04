@@ -1,0 +1,359 @@
+/* LaughterScale — dark neon, matching the JRA house artwork. */
+
+:root {
+  --ink: #f4efe6;
+  --dim: #9a8f82;
+  --bg: #07060a;
+  --panel: #100d16;
+  --line: #241d2e;
+  --gold: #f6c445;
+  --flamingo: #ff5fa8;
+  --measure: 68rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 17px/1.65 ui-serif, Georgia, 'Times New Roman', serif;
+  overflow-x: hidden;
+}
+
+.glow {
+  position: fixed;
+  inset: -20% -20% auto -20%;
+  height: 70vh;
+  background:
+    radial-gradient(50% 60% at 30% 0%, rgba(255, 95, 168, 0.16), transparent 70%),
+    radial-gradient(45% 55% at 75% 10%, rgba(154, 107, 255, 0.14), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 5rem) clamp(1.1rem, 4vw, 2rem) 4rem;
+}
+
+h1, h2, h3, .eyebrow, .stamp, .badge, .bonus-tag, .rung-n, .rung-name, .specimen-id, .creed {
+  font-family: ui-sans-serif, system-ui, 'Helvetica Neue', Arial, sans-serif;
+}
+
+a { color: var(--flamingo); }
+
+.dim { color: var(--dim); }
+
+/* ---------- masthead ---------- */
+
+.masthead { text-align: center; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+
+.eyebrow {
+  margin: 0 0 1.2rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.85;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.6rem, 11vw, 5.6rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  background: linear-gradient(96deg, #f6c445, #fff3c4 32%, #ffd9e8 58%, #c86bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tagline {
+  margin: 0.9rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.stamp {
+  margin: 1.6rem auto 0;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ---------- the scale ---------- */
+
+.scale {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5.4rem, 1fr));
+  gap: 0.4rem;
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* All twelve rungs on one row once there's room — a wrapped scale reads as two scales. */
+@media (min-width: 62rem) {
+  .scale { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 0.3rem; }
+  .rung { padding: 0.8rem 0.4rem 0.9rem; }
+  .rung-name { font-size: 0.56rem; letter-spacing: 0.06em; }
+  .rung-blurb { font-size: 0.66rem; }
+}
+
+.rung {
+  padding: 0.85rem 0.6rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid color-mix(in srgb, var(--rung) 26%, transparent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--rung) 13%, transparent), transparent);
+  text-align: center;
+}
+
+.rung-n {
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rung);
+  text-shadow: 0 0 18px color-mix(in srgb, var(--rung) 55%, transparent);
+}
+
+.rung-name {
+  margin-top: 0.4rem;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--rung) 78%, white);
+}
+
+.rung-blurb {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--dim);
+}
+
+/* ---------- bonus key ---------- */
+
+.bonuses-key { margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+
+.bonuses-key ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bonuses-key li {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+  color: var(--dim);
+  background: var(--panel);
+}
+
+.bonuses-key b { color: var(--gold); }
+
+h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.lede { margin: 0 0 1.8rem; color: var(--dim); max-width: 46ch; }
+
+/* ---------- specimens ---------- */
+
+.specimens { display: grid; gap: 1rem; }
+
+.specimen {
+  position: relative;
+  padding: clamp(1.3rem, 4vw, 2rem);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--rung);
+  border-radius: 0.7rem;
+  background: var(--panel);
+}
+
+.specimen-head { margin-bottom: 1.1rem; }
+
+.specimen-id {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.specimen h3 {
+  margin: 0.3rem 0 0;
+  font-size: clamp(1.15rem, 3vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+blockquote {
+  margin: 0;
+  font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+  line-height: 1.55;
+  color: #fdf8ef;
+}
+
+.attrib {
+  margin-top: 0.9rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--dim);
+}
+
+/* ---------- verdict ---------- */
+
+.verdict {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: clamp(1rem, 3vw, 1.8rem);
+  align-items: start;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.badge { text-align: center; }
+
+.badge-num {
+  display: block;
+  font-size: 3.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--rung);
+  text-shadow: 0 0 26px color-mix(in srgb, var(--rung) 50%, transparent);
+}
+
+.badge-num sup { font-size: 0.45em; }
+
+.badge-name {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--rung) 75%, white);
+}
+
+.math {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.84rem;
+  color: var(--dim);
+  margin-bottom: 0.6rem;
+}
+
+.math b { color: var(--ink); }
+
+.bonuses { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.5rem; }
+
+.bonuses li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.7rem;
+  align-items: baseline;
+  font-size: 0.9rem;
+}
+
+.bonus-tag {
+  flex: none;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid color-mix(in srgb, var(--gold) 30%, transparent);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.bonus-why { flex: 1 1 14rem; color: var(--dim); font-size: 0.92rem; line-height: 1.5; }
+
+.note {
+  margin-top: 1.4rem;
+  padding-top: 1.1rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #c9bfb2;
+}
+
+.note b {
+  color: var(--flamingo);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ---------- vacancy + footer ---------- */
+
+.vacancy {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px dashed color-mix(in srgb, var(--flamingo) 40%, transparent);
+  border-radius: 0.7rem;
+  background: radial-gradient(120% 140% at 50% 0%, rgba(255, 61, 240, 0.08), transparent 70%);
+}
+
+.vacancy h2 { color: var(--flamingo); }
+.vacancy p { margin: 0 0 0.7rem; max-width: 54ch; }
+.vacancy p:last-child { margin-bottom: 0; }
+
+.disclaimer {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--dim);
+}
+
+.disclaimer b { color: #b8ada0; }
+
+.creed {
+  margin: 1.2rem 0 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+@media (max-width: 34rem) {
+  .verdict { grid-template-columns: 1fr; }
+  .badge { text-align: left; display: flex; align-items: baseline; gap: 0.7rem; }
+  .badge-num { font-size: 2.6rem; }
+  .badge-name { margin-top: 0; }
+}
