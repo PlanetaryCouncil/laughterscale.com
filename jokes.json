@@ -76,6 +76,20 @@
     "note": "The Inspectorate acknowledges the opening clause is not original and has elected not to penalise it, on the grounds that the reversal could not exist without it."
   },
   {
+    "id": "008",
+    "title": "Satire Non-Proliferation Treaty",
+    "text": "You can inspect a stockpile of warheads. You cannot inspect a stockpile of jokes that haven't landed yet — because per the uncertainty principle, measuring them disarms them. Measurement constitutes disarmament.",
+    "submittedBy": "Prof. F. L. Amingo, Ph.D., Commanding Officer, Battalion of Militarized Satire",
+    "base": 5,
+    "baseLabel": "Laugh",
+    "bonuses": [
+      { "label": "Originality", "value": "+1", "why": "Arms-control law is not a worn path to a punchline, and the treaty language fits the physics exactly." },
+      { "label": "Unexpected", "value": "+1", "why": "The asymmetry does it — warheads hold still to be counted, jokes do not." },
+      { "label": "Visual Aid", "value": "+1", "why": "Pink multicam and aviators. The grenade reads PUNCH UP. NOT DOWN." }
+    ],
+    "note": "A treaty with no workable verification regime is normally worthless. This one is the exception: the inspection clause is unenforceable by construction, which makes the treaty self-executing. The Inspectorate has therefore been in continuous compliance since before it was drafted, and intends to remain so by doing nothing."
+  },
+  {
     "id": "007",
     "title": "The Satirical Uncertainty Principle",
     "text": "A flamingo in a tweed jacket holds the J.R.A. Chair of Ironic Studies. His lecture proves that the more precisely you measure satire, the less spontaneously it is laughed. His mug reads I MEASURE, THEREFORE I MAYBE LAUGH. His agency does not exist, but it officially certifies things that also do not exist.",
