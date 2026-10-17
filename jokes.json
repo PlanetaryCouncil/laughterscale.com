@@ -26,6 +26,13 @@
     "id": "001",
     "title": "The Humour Uncertainty Principle",
     "text": "You can know how funny something is, or you can laugh at it — never both at once. The preservation law holds, though. The LOLness isn't destroyed. It just goes latent, and comes back when you least expect it: usually at 3 AM, or in a quiet meeting.",
+    "image": {
+      "src": "img/001-uncertainty-principle.webp",
+      "alt": "Prof. F. L. Amingo, a pink flamingo in a tweed jacket and bow tie, lecturing at a whiteboard titled The Satirical Uncertainty Principle, with the equation delta satire times delta laughter is at least h-bar sub s and a graph of laughter falling as measurement rises. On the desk, a mug reading I measure, therefore I maybe laugh. Below, a certificate from the Joke Regulation Authority, Inspectorate of Satire, and a laughter meter reading 32.7 LOL units.",
+      "width": 1122,
+      "height": 1402,
+      "caption": "Exhibit A — the original lecture. Prof. F. L. Amingo presiding."
+    },
     "submittedBy": "The Management",
     "base": 5,
     "baseLabel": "Laugh",
