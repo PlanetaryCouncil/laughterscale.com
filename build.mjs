@@ -22,18 +22,30 @@ const esc = (s) =>
   String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
 // Additive bonuses first, then multipliers — (base + adds) x mults.
+// 11 is conferred, not computed: without Legendary the instrument tops out at 10.
 function score(joke) {
   const bonuses = joke.bonuses ?? [];
   const adds = bonuses.filter((b) => b.value.startsWith('+'));
   const mults = bonuses.filter((b) => !b.value.startsWith('+'));
   const summed = adds.reduce((t, b) => t + Number(b.value.slice(1)), joke.base);
-  const raw = mults.reduce((t, b) => t * Number(b.value.replace(/[^\d.]/g, '')), summed);
-  const capped = Math.min(raw, 11);
-  return { raw, rung: SCALE[capped], overflow: raw > 11 };
+  const factors = mults.map((b) => Number(b.value.replace(/[^\d.]/g, '')));
+  const raw = factors.reduce((t, f) => t * f, summed);
+  const ceiling = bonuses.some((b) => b.label === 'Legendary') ? 11 : 10;
+  const final = Math.min(raw, ceiling);
+  const formula = `${adds.length ? `(${joke.base} + ${summed - joke.base})` : joke.base}${factors.map((f) => ` × ${f}`).join('')}`;
+  return { raw, final, rung: SCALE[final], capped: raw > final, ceiling, formula };
 }
 
+const exhibit = (img) =>
+  img
+    ? `<figure class="exhibit">
+          <img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${esc(img.width)}" height="${esc(img.height)}" loading="lazy">
+          <figcaption>${esc(img.caption)}</figcaption>
+        </figure>`
+    : '';
+
 const jokeCard = (joke) => {
-  const { raw, rung, overflow } = score(joke);
+  const { raw, final, rung, capped, ceiling, formula } = score(joke);
   const adds = (joke.bonuses ?? [])
     .map(
       (b) => `<li><span class="bonus-tag">${esc(b.label)} <b>${esc(b.value)}</b></span>
@@ -47,15 +59,17 @@ const jokeCard = (joke) => {
           <h3>${esc(joke.title)}</h3>
         </header>
         <blockquote>${esc(joke.text)}</blockquote>
+        ${exhibit(joke.image)}
         <div class="attrib">Submitted by ${esc(joke.submittedBy)}</div>
         <div class="verdict">
           <div class="badge">
-            <span class="badge-num">${esc(raw)}${overflow ? '<sup>+</sup>' : ''}</span>
+            <span class="badge-num">${esc(final)}</span>
             <span class="badge-name">${esc(rung.name)}</span>
           </div>
           <div class="breakdown">
             <div class="math">Base <b>${esc(joke.base)}</b> <span class="dim">(${esc(joke.baseLabel)})</span></div>
             ${adds ? `<ul class="bonuses">\n          ${adds}\n          </ul>` : '<div class="dim">No bonuses awarded.</div>'}
+            ${capped ? `<div class="ceiling">Raw reading ${esc(formula)} = <b>${esc(raw)}</b>. The needle stops at ${ceiling}${ceiling < 11 ? '; position 11 requires Legendary status' : ''}.</div>` : ''}
           </div>
         </div>
         <footer class="note"><b>Inspector's note.</b> ${esc(joke.note)}</footer>
@@ -63,8 +77,8 @@ const jokeCard = (joke) => {
 };
 
 const jokes = JSON.parse(readFileSync(new URL('./jokes.json', import.meta.url), 'utf8'));
-const ranked = [...jokes].sort((a, b) => score(b).raw - score(a).raw);
-const best = score(ranked[0]).raw;
+const ranked = [...jokes].sort((a, b) => score(b).final - score(a).final || score(b).raw - score(a).raw);
+const best = score(ranked[0]).final;
 
 const html = `<!doctype html>
 <html lang="en">
@@ -87,7 +101,7 @@ const html = `<!doctype html>
     <p class="eyebrow">Independent Laboratory for Comedic Performance</p>
     <h1>The Laughter Scale</h1>
     <p class="tagline">Measure the impact. Feel the effect.</p>
-    <p class="stamp">${jokes.length} specimens certified &middot; highest reading ${best} LOL units &middot; position 11 remains vacant</p>
+    <p class="stamp">${jokes.length} specimens certified &middot; highest reading ${best} LOL units${best < 11 ? ' &middot; position 11 remains vacant' : ''}</p>
   </header>
 
   <section class="scale" aria-label="The scale, 0 to 11">

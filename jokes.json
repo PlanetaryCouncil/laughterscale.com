@@ -1,5 +1,27 @@
 [
   {
+    "id": "009",
+    "title": "Due Diligence",
+    "text": "I sent money to a dude in a hot tub in Hawaii to 5× my money. OUTRAGE! SHOCKING! To be fair, he called it a 'donation' and a 'game'.",
+    "image": {
+      "src": "img/009-due-diligence.webp",
+      "alt": "Meme of a grinning man in a glowing hot tub at sunset, phone on a tripod marked LIVE, with the joke as captions; below it, a chat reply reading: Bro, this one is your best yet, followed by crying-laughing emoji and 'omg ahhahahahaah', then a second reply: Wow.",
+      "width": 1020,
+      "height": 852,
+      "caption": "Exhibit A — field reaction, 16 October, 22:50. Witness identity withheld."
+    },
+    "submittedBy": "The Management",
+    "base": 5,
+    "baseLabel": "Laugh",
+    "bonuses": [
+      { "label": "Unexpected", "value": "+1", "why": "'To be fair.' The victim rises to the defence of the man in the hot tub." },
+      { "label": "Relatable", "value": "+1", "why": "Every reader has watched someone do exactly this. Some have watched themselves." },
+      { "label": "Visual Aid", "value": "+1", "why": "The phone on the tripod is marked LIVE. The transaction is being streamed." },
+      { "label": "Audience Amplifier", "value": "x2", "why": "Documented in Exhibit A: seven crying-laughing emoji, an unbroken 'ahhahahahaah', and a second witness reduced to 'Wow'. The reaction is funnier than most jokes, which is the multiplier's entire definition." }
+    ],
+    "note": "The first specimen to exceed the instrument. It does not reach 11, because 11 is conferred, not computed. The Inspectorate further finds that no fraud occurred: the terms were disclosed in full, and they were 'donation' and 'game'."
+  },
+  {
     "id": "001",
     "title": "The Humour Uncertainty Principle",
     "text": "You can know how funny something is, or you can laugh at it — never both at once. The preservation law holds, though. The LOLness isn't destroyed. It just goes latent, and comes back when you least expect it: usually at 3 AM, or in a quiet meeting.",

@@ -39,6 +39,9 @@ i.e. `(base + adds) × mults`. Don't store the total in the data; it would drift
 }
 ```
 
+Optional `"image": { "src", "alt", "width", "height", "caption" }` renders an exhibit
+under the joke. Images live in `img/`, named after the specimen id.
+
 Valid bonuses: `Unexpected +1`, `Relatable +1`, `Timing +1`, `Originality +1`,
 `Visual Aid +1`, `Audience Amplifier x2`, `Repeat Value x2`, `Legendary x3`.
 
@@ -47,8 +50,10 @@ not a position.
 
 ## House rules
 
-- **Position 11 stays vacant.** The empty top of the scale is a load-bearing joke.
-  Filling it costs more than it earns.
+- **11 is conferred, not computed.** Without the `Legendary` multiplier the instrument
+  tops out at 10, however high the raw reading goes — the card shows the raw figure and
+  where the needle stopped. Multipliers can therefore be awarded honestly without
+  arithmetic filling the top rung by accident. Rung 11's own caption is "Legendary".
 - **Specimen 002 (the chicken) never moves.** It is the calibration standard. Its score
   is 1 by design, not by oversight.
 - **Scores are honest.** The bureaucratic voice is a bit; the judgment underneath isn't.

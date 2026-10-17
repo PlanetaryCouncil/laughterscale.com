@@ -223,6 +223,36 @@ blockquote {
   color: #fdf8ef;
 }
 
+.exhibit { margin: 1.3rem 0 0; max-width: 32rem; }
+
+.exhibit img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+
+.exhibit figcaption {
+  margin-top: 0.5rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+.ceiling {
+  margin-top: 0.9rem;
+  padding: 0.55rem 0.8rem;
+  border-left: 2px solid var(--rung);
+  background: color-mix(in srgb, var(--rung) 8%, transparent);
+  font-size: 0.86rem;
+  color: #c9bfb2;
+}
+
+.ceiling b { color: var(--rung); }
+
 .attrib {
   margin-top: 0.9rem;
   font-size: 0.8rem;
