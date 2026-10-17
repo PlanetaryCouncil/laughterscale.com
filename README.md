@@ -54,7 +54,13 @@ not a position.
   tops out at 10, however high the raw reading goes — the card shows the raw figure and
   where the needle stopped. Multipliers can therefore be awarded honestly without
   arithmetic filling the top rung by accident. Rung 11's own caption is "Legendary".
-- **Specimen 002 (the chicken) never moves.** It is the calibration standard. Its score
+- **Legendary requires third-hand transmission.** Laughter from someone who encountered
+  neither the joke nor anyone's first-hand reaction to it — only an account of the
+  situation. Seeing someone laugh is `Audience Amplifier`; laughing at the retelling of
+  it is `Legendary`. This is what keeps 11 rare.
+- **Specimen 009 (Due Diligence) is the Gold Standard**, the upper reference, first
+  holder of position 11. Optional `"designation"` renders a tag beside the specimen id.
+- **Specimen 002 (the chicken) never moves.** It is the calibration standard, the lower reference. Its score
   is 1 by design, not by oversight.
 - **Scores are honest.** The bureaucratic voice is a bit; the judgment underneath isn't.
   A register of straight 8s measures nothing.

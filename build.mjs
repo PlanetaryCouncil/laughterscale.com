@@ -55,7 +55,7 @@ const jokeCard = (joke) => {
 
   return `<article class="specimen" style="--rung:${rung.color}">
         <header class="specimen-head">
-          <div class="specimen-id">Specimen ${esc(joke.id)}</div>
+          <div class="specimen-id">Specimen ${esc(joke.id)}${joke.designation ? ` <span class="designation">${esc(joke.designation)}</span>` : ''}</div>
           <h3>${esc(joke.title)}</h3>
         </header>
         <blockquote>${esc(joke.text)}</blockquote>
@@ -79,6 +79,7 @@ const jokeCard = (joke) => {
 const jokes = JSON.parse(readFileSync(new URL('./jokes.json', import.meta.url), 'utf8'));
 const ranked = [...jokes].sort((a, b) => score(b).final - score(a).final || score(b).raw - score(a).raw);
 const best = score(ranked[0]).final;
+const holder = ranked.find((j) => score(j).final === 11);
 
 const html = `<!doctype html>
 <html lang="en">
@@ -138,8 +139,12 @@ const html = `<!doctype html>
   </section>
 
   <section class="vacancy">
-    <h2>Position 11 &mdash; Vacant</h2>
-    <p>No specimen has yet achieved <b>He Ran Out Of Oxygen And Died</b>. The Inspectorate does not expect to fill this position and is not accepting speculative applications.</p>
+    ${holder
+      ? `<h2>Position 11 &mdash; Filled</h2>
+    <p><b>He Ran Out Of Oxygen And Died</b> is held by Specimen ${esc(holder.id)}, <i>${esc(holder.title)}</i>, by conferral. The Inspectorate did not expect to fill this position, and it was not filled by arithmetic: Legendary is awarded only on evidence of third-hand transmission, meaning laughter from someone who encountered neither the joke nor anyone's first-hand reaction to it.</p>
+    <p>Further applications will be held to the same standard.</p>`
+      : `<h2>Position 11 &mdash; Vacant</h2>
+    <p>No specimen has yet achieved <b>He Ran Out Of Oxygen And Died</b>. The Inspectorate does not expect to fill this position and is not accepting speculative applications.</p>`}
     <p class="dim">Submissions: <a href="mailto:jokes@laughterscale.com">jokes@laughterscale.com</a></p>
   </section>
 

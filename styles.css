@@ -208,6 +208,16 @@ h2 {
   color: var(--dim);
 }
 
+.designation {
+  margin-left: 0.5rem;
+  padding: 0.12rem 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--gold) 45%, transparent);
+  border-radius: 999px;
+  color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 10%, transparent);
+  letter-spacing: 0.14em;
+}
+
 .specimen h3 {
   margin: 0.3rem 0 0;
   font-size: clamp(1.15rem, 3vw, 1.45rem);

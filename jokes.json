@@ -2,6 +2,7 @@
   {
     "id": "009",
     "title": "Due Diligence",
+    "designation": "Gold Standard",
     "text": "I sent money to a dude in a hot tub in Hawaii to 5× my money. OUTRAGE! SHOCKING! To be fair, he called it a 'donation' and a 'game'.",
     "image": {
       "src": "img/009-due-diligence.webp",
@@ -18,9 +19,10 @@
       { "label": "Relatable", "value": "+1", "why": "Every reader has watched someone do exactly this. Some have watched themselves." },
       { "label": "Visual Aid", "value": "+1", "why": "The phone on the tripod is marked LIVE. The transaction is being streamed." },
       { "label": "Slant Rhyme", "value": "+0.5", "why": "Awarded on a grievance from the Labour Union of Joke Interpreters. HAWAII / MONEY upheld: both end a line and land on the same unstressed 'ee'. FAIR / GAME rejected as cited: different vowel, different ending. The union missed the stronger pair: DONATION / GAME share a stressed 'ay', and they are the two words in scare quotes." },
-      { "label": "Audience Amplifier", "value": "x2", "why": "Documented in Exhibit A: seven crying-laughing emoji, an unbroken 'ahhahahahaah', and a second witness reduced to 'Wow'. The reaction is funnier than most jokes, which is the multiplier's entire definition." }
+      { "label": "Audience Amplifier", "value": "x2", "why": "Documented in Exhibit A: seven crying-laughing emoji, an unbroken 'ahhahahahaah', and a second witness reduced to 'Wow'. The reaction is funnier than most jokes, which is the multiplier's entire definition." },
+      { "label": "Legendary", "value": "x3", "why": "Testimony of The Management: a housemate, shown neither the joke nor the reaction, laughed at a spoken account of the situation alone. The laughter survived the loss of both the joke and the witness. That is the literal meaning of legendary: a story that still works when it is retold." }
     ],
-    "note": "The first specimen to exceed the instrument. It does not reach 11, because 11 is conferred, not computed. The Inspectorate further finds that no fraud occurred: the terms were disclosed in full, and they were 'donation' and 'game'. Amended on appeal: raw reading revised from 16 to 17. The needle did not move."
+    "note": "The first specimen to exceed the instrument, and the first to hold position 11, not by arithmetic but by conferral, on evidence of third-hand transmission. Designated the Gold Standard: the upper reference for all future readings, as Specimen 002 anchors the lower. The Inspectorate further finds that no fraud occurred: the terms were disclosed in full, and they were 'donation' and 'game'. Record of amendments: Slant Rhyme awarded on appeal (raw 16 to 17, needle unmoved); Legendary conferred 17 October 2026 (raw 17 to 51, needle at 11). The chain reaction has not been observed to terminate."
   },
   {
     "id": "001",
@@ -46,6 +48,7 @@
   {
     "id": "002",
     "title": "Calibration Standard",
+    "designation": "Lower Reference",
     "text": "Why did the chicken cross the road? To get to the other side.",
     "submittedBy": "Unattributed (pre-1847)",
     "base": 1,
