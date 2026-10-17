@@ -43,7 +43,7 @@ Optional `"image": { "src", "alt", "width", "height", "caption" }` renders an ex
 under the joke. Images live in `img/`, named after the specimen id.
 
 Valid bonuses: `Unexpected +1`, `Relatable +1`, `Timing +1`, `Originality +1`,
-`Visual Aid +1`, `Audience Amplifier x2`, `Repeat Value x2`, `Legendary x3`.
+`Visual Aid +1`, `Slant Rhyme +0.5`, `Audience Amplifier x2`, `Repeat Value x2`, `Legendary x3`.
 
 Specimens are sorted by score at build time — `id` is a permanent catalogue number,
 not a position.

@@ -33,7 +33,7 @@ function score(joke) {
   const ceiling = bonuses.some((b) => b.label === 'Legendary') ? 11 : 10;
   const final = Math.min(raw, ceiling);
   const formula = `${adds.length ? `(${joke.base} + ${summed - joke.base})` : joke.base}${factors.map((f) => ` × ${f}`).join('')}`;
-  return { raw, final, rung: SCALE[final], capped: raw > final, ceiling, formula };
+  return { raw, final, rung: SCALE[Math.floor(final)], capped: raw > final, ceiling, formula };
 }
 
 const exhibit = (img) =>
@@ -122,6 +122,7 @@ const html = `<!doctype html>
       <li>Timing <b>+1</b></li>
       <li>Originality <b>+1</b></li>
       <li>Visual Aid <b>+1</b></li>
+      <li>Slant Rhyme <b>+0.5</b></li>
       <li>Audience Amplifier <b>&times;2</b></li>
       <li>Repeat Value <b>&times;2</b></li>
       <li>Legendary <b>&times;3</b></li>
