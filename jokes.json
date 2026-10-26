@@ -1,5 +1,25 @@
 [
   {
+    "id": "010",
+    "title": "Residual Laughter",
+    "designation": "Residual Laughter",
+    "text": "The BBC's cyber correspondent said on air that he hadn't heard of PHP, the programming language behind a large share of the web, until a story about it.",
+    "submittedBy": "The Management",
+    "base": 4,
+    "baseLabel": "Giggle",
+    "bonuses": [
+      { "label": "Unexpected", "value": "+1", "why": "Of all the job titles that could not know PHP, 'cyber correspondent' was the one nobody had on the list." },
+      { "label": "Repeat Value", "value": "x2", "why": "Testimony of The Management: the laugh returned reliably three days after the event, every time the tab was reopened. The first award of this multiplier." }
+    ],
+    "note": "The reference specimen for residual laughter, as predicted by the preservation law of Specimen 001: the LOLness was not destroyed, it went latent, and it comes back whenever the tab does. The Inspectorate further notes that PHP itself has been asked to resign for twenty-five years and has declined every time.",
+    "response": {
+      "author": "Joe Tidy",
+      "quote": "Every day is a school day",
+      "url": "https://www.instagram.com/p/De2MIlnqVMH/"
+    },
+    "disclaimer": "No one deserves to be bullied online. The Inspectorate measures the moment, not the man, who has said he intends to keep reporting on cyber for many years yet."
+  },
+  {
     "id": "009",
     "title": "Due Diligence",
     "designation": "Gold Standard",

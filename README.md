@@ -42,6 +42,9 @@ i.e. `(base + adds) × mults`. Don't store the total in the data; it would drift
 Optional `"image": { "src", "alt", "width", "height", "caption" }` renders an exhibit
 under the joke. Images live in `img/`, named after the specimen id.
 
+Specimens about real people get `"response": { "author", "quote", "url" }` (their own
+words, linked) and a `"disclaimer"`. See 010.
+
 Valid bonuses: `Unexpected +1`, `Relatable +1`, `Timing +1`, `Originality +1`,
 `Visual Aid +1`, `Slant Rhyme +0.5`, `Audience Amplifier x2`, `Repeat Value x2`, `Legendary x3`.
 

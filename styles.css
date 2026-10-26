@@ -347,6 +347,31 @@ blockquote {
   color: #c9bfb2;
 }
 
+.reply, .card-disclaimer {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #c9bfb2;
+}
+
+.reply b {
+  color: var(--gold);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.card-disclaimer {
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+  color: var(--dim);
+}
+
 .note b {
   color: var(--flamingo);
   font-family: ui-sans-serif, system-ui, sans-serif;

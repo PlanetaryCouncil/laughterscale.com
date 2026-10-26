@@ -73,6 +73,8 @@ const jokeCard = (joke) => {
           </div>
         </div>
         <footer class="note"><b>Inspector's note.</b> ${esc(joke.note)}</footer>
+        ${joke.response ? `<aside class="reply"><b>Right of reply.</b> ${esc(joke.response.author)}: &ldquo;${esc(joke.response.quote)}&rdquo; <a href="${esc(joke.response.url)}" rel="noopener">Read his full response</a>.</aside>` : ''}
+        ${joke.disclaimer ? `<aside class="card-disclaimer">${esc(joke.disclaimer)}</aside>` : ''}
       </article>`;
 };
 
