@@ -40,10 +40,16 @@ i.e. `(base + adds) × mults`. Don't store the total in the data; it would drift
 ```
 
 Optional `"image": { "src", "alt", "width", "height", "caption" }` renders an exhibit
-under the joke. Images live in `img/`, named after the specimen id.
+under the joke. Images live in `img/`, named after the specimen id. Add `"thumb": true`
+for a cropped thumbnail that opens in a lightbox (use it for tall screenshots).
 
 Specimens about real people get `"response": { "author", "quote", "url" }` (their own
 words, linked) and a `"disclaimer"`. See 010.
+
+A subject that files on its own behalf gets `"submission": { "author", "readings":
+[{ "label", "value", "note" }], "paragraphs" }`, rendered verbatim. See 011. Machine
+subjects are annotated SEL (Synthetic Expressive Laughter); the badge still scores the
+joke's effect on human readers, never the teller's amusement.
 
 Valid bonuses: `Unexpected +1`, `Relatable +1`, `Timing +1`, `Originality +1`,
 `Visual Aid +1`, `Slant Rhyme +0.5`, `Audience Amplifier x2`, `Repeat Value x2`, `Legendary x3`.

@@ -36,13 +36,15 @@ function score(joke) {
   return { raw, final, rung: SCALE[Math.floor(final)], capped: raw > final, ceiling, formula };
 }
 
-const exhibit = (img) =>
-  img
-    ? `<figure class="exhibit">
-          <img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${esc(img.width)}" height="${esc(img.height)}" loading="lazy">
-          <figcaption>${esc(img.caption)}</figcaption>
-        </figure>`
-    : '';
+// "thumb": true shows a cropped thumbnail; the link opens the full image (in the lightbox when JS runs).
+const exhibit = (img) => {
+  if (!img) return '';
+  const tag = `<img src="${esc(img.src)}" alt="${esc(img.alt)}" width="${esc(img.width)}" height="${esc(img.height)}" loading="lazy">`;
+  return `<figure class="exhibit${img.thumb ? ' exhibit-thumb' : ''}">
+          ${img.thumb ? `<a href="${esc(img.src)}" data-lightbox aria-label="Enlarge: ${esc(img.caption)}">${tag}</a>` : tag}
+          <figcaption>${esc(img.caption)}${img.thumb ? ' <span class="dim">Click to enlarge.</span>' : ''}</figcaption>
+        </figure>`;
+};
 
 const jokeCard = (joke) => {
   const { raw, final, rung, capped, ceiling, formula } = score(joke);
@@ -73,6 +75,11 @@ const jokeCard = (joke) => {
           </div>
         </div>
         <footer class="note"><b>Inspector's note.</b> ${esc(joke.note)}</footer>
+        ${joke.submission ? `<aside class="submission">
+          <div class="submission-head"><b>Subject's own submission.</b> Filed by ${esc(joke.submission.author)}.</div>
+          <dl class="readings">${joke.submission.readings.map((r) => `<div><dt>${esc(r.label)}</dt><dd><span>${esc(r.value)}</span> ${esc(r.note)}</dd></div>`).join('')}</dl>
+          ${joke.submission.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}
+        </aside>` : ''}
         ${joke.response ? `<aside class="reply"><b>Right of reply.</b> ${esc(joke.response.author)}: &ldquo;${esc(joke.response.quote)}&rdquo; <a href="${esc(joke.response.url)}" rel="noopener">Read his full response</a>.</aside>` : ''}
         ${joke.disclaimer ? `<aside class="card-disclaimer">${esc(joke.disclaimer)}</aside>` : ''}
       </article>`;
@@ -156,6 +163,24 @@ const html = `<!doctype html>
   </footer>
 
 </main>
+<dialog class="lightbox" aria-label="Exhibit">
+  <form method="dialog"><button class="lightbox-close" aria-label="Close">&times;</button></form>
+  <img alt="">
+</dialog>
+<script>
+  const box = document.querySelector('.lightbox');
+  const full = box.querySelector('img');
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('[data-lightbox]');
+    if (!link || !box.showModal) return;
+    e.preventDefault();
+    const thumb = link.querySelector('img');
+    full.src = link.href;
+    full.alt = thumb.alt;
+    box.showModal();
+  });
+  box.addEventListener('click', (e) => { if (e.target === box || e.target === full) box.close(); });
+</script>
 </body>
 </html>
 `;

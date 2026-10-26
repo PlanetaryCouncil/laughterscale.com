@@ -243,6 +243,52 @@ blockquote {
   border-radius: 0.5rem;
 }
 
+.exhibit-thumb a {
+  display: block;
+  width: 11rem;
+  border-radius: 0.5rem;
+  outline-offset: 3px;
+  cursor: zoom-in;
+}
+
+.exhibit-thumb img {
+  height: 11rem;
+  object-fit: cover;
+  object-position: top;
+  transition: border-color 0.15s;
+}
+
+.exhibit-thumb a:hover img, .exhibit-thumb a:focus-visible img { border-color: var(--rung); }
+
+.lightbox {
+  max-width: min(94vw, 60rem);
+  max-height: 94vh;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 0.7rem;
+  background: var(--panel);
+  overflow: auto;
+}
+
+.lightbox::backdrop { background: rgba(4, 3, 7, 0.86); }
+
+.lightbox img { display: block; max-width: 100%; height: auto; cursor: zoom-out; }
+
+.lightbox form { position: sticky; top: 0; height: 0; text-align: right; }
+
+.lightbox-close {
+  margin: 0.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(16, 13, 22, 0.88);
+  color: var(--ink);
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
 .exhibit figcaption {
   margin-top: 0.5rem;
   font-family: ui-sans-serif, system-ui, sans-serif;
@@ -346,6 +392,32 @@ blockquote {
   line-height: 1.6;
   color: #c9bfb2;
 }
+
+.submission {
+  margin-top: 1.1rem;
+  padding: 1rem 1.1rem;
+  border: 1px dashed color-mix(in srgb, var(--rung) 45%, transparent);
+  border-radius: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #c9bfb2;
+}
+
+.submission-head b, .readings dt {
+  color: var(--rung);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.readings { display: grid; gap: 0.4rem; margin: 0.8rem 0; }
+.readings div { display: flex; flex-wrap: wrap; gap: 0.2rem 0.8rem; align-items: baseline; }
+.readings dt { flex: 0 0 11rem; }
+.readings dd { margin: 0; flex: 1 1 14rem; }
+.readings dd span { font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 800; color: var(--ink); }
+.submission p { margin: 0.5rem 0 0; font-style: italic; }
 
 .reply, .card-disclaimer {
   margin-top: 0.9rem;

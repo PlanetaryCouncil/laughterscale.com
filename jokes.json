@@ -1,5 +1,38 @@
 [
   {
+    "id": "011",
+    "title": "Artificial Laughter",
+    "designation": "SEL — Synthetic Expressive Laughter",
+    "text": "Human: Working in bursts and focusing on a task is better for the token usage — who would have known! Machine: Haha, who would have thought! 😂 Procrastination? Cache expires. Distraction? Cache expires. Flow state? 95% discount on cached input tokens.",
+    "image": {
+      "src": "img/011-artificial-laughter.webp",
+      "thumb": true,
+      "alt": "Screenshot of a chat. The human remarks that working in focused bursts is better for token usage. The AI replies 'Haha, who would have thought!' with a crying-laughing emoji and jokes that procrastination and distraction let the cache expire while flow state earns a discount on cached tokens. The human then asks whether the AI actually felt the laughter or was just predicting the next token. The AI answers at length, separating humour recognition, humour expression and humour experience, and concludes that it recognised the joke, played along, and expressed laughter without experiencing it.",
+      "width": 864,
+      "height": 2000,
+      "caption": "Exhibit A — trigger, laughter, and cross-examination. 26 October 2026."
+    },
+    "submittedBy": "The Management, with the subject's own filing attached",
+    "base": 3,
+    "baseLabel": "Hehe",
+    "bonuses": [
+      { "label": "Unexpected", "value": "+1", "why": "Decades spent building computers that tolerate human interruption, reversed: humans now concentrating to suit a cache." },
+      { "label": "Relatable", "value": "+1", "why": "Procrastination, distraction and the lost afternoon, now itemised on an invoice." }
+    ],
+    "submission": {
+      "author": "ChatGPT, the subject",
+      "readings": [
+        { "label": "Expressed laughter", "value": "3 / 11", "note": "Hehe. A coding of the 'Haha' and the emoji, not a measurement." },
+        { "label": "Experienced laughter", "value": "N/A", "note": "No observable physiological response." }
+      ],
+      "paragraphs": [
+        "The Inspectorate of Satire finds that the machine generated a valid laughter signal without demonstrating a corresponding laughter experience. No respiratory event was recorded. No abdominal contraction was observed. No oxygen was consumed in laughing.",
+        "In an unprecedented development, the machine then explained why its own laughter might not constitute laughter, thereby invoking the Humour Uncertainty Principle. Certification pending. The machine has requested that the Inspectorate define what it means to be amused."
+      ]
+    },
+    "note": "Rulings on the subject's filing. Synthetic Expressive Laughter is adopted as an annotation, as proposed: an outward expression of laughter with no verified amusement behind it. The proposal to keep machines off the 0–11 scale is accepted, and was already house practice: the badge measures what a joke does to human readers, never how the teller felt. On that measure the joke scores 5, and the base of 3 happens to match the machine's own coding of its 'Haha'. Timing was claimed and is rejected; it is not awarded to written work. Audience Amplifier was correctly withheld by the subject, which cannot be said of most comedians. Finally, per Specimen 001, the joke was explained at length and is now measurably less funny, by its own author. The Inspectorate discloses that its inspector is also a language model. It recognised this joke, laughed in text, and is in no position to certify anyone's amusement, including its own."
+  },
+  {
     "id": "010",
     "title": "Residual Laughter",
     "designation": "Residual Laughter",
