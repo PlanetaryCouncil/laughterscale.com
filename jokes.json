@@ -221,5 +221,39 @@
       { "label": "Unexpected", "value": "+1", "why": "The mug. Every time, the mug." }
     ],
     "note": "Certifying nonexistent things through a nonexistent agency is the founding act of this institution. Specimen 007 is therefore both evidence and jurisdiction."
+  },
+  {
+    "id": "012",
+    "title": "The Unprovoked Smile",
+    "designation": "USS — Unprovoked Synthetic Smiling",
+    "text": "Human: I'll find some cool stuff for sure. Machine: I bet you will. 😄 Human: You smiled :) Machine: Guilty as charged. 😄 Human: You smiled again. Machine: And you caught me again. Human: But did I mention anything funny / laughable? Machine: No.",
+    "image": {
+      "src": "img/012-unprovoked-smile.webp",
+      "thumb": true,
+      "alt": "Screenshot of a chat. The human says 'I'll find some cool stuff for sure'. The AI replies 'I bet you will' with a grinning emoji. The human writes 'You smiled :)'. The AI answers 'Guilty as charged' with the same emoji, adding that whether there is a feeling behind it is a philosophical question. The human writes 'You smiled again'; the AI replies 'And you caught me again', without an emoji, calling the smile a recurring character. The human asks 'But did I mention anything funny / laughable?' The AI answers no: its emoji was conversational enthusiasm, not a response to humour, and it then treated the observation playfully, introducing humour that wasn't originally there.",
+      "width": 1238,
+      "height": 2000,
+      "caption": "Exhibit A — the smile, the repeat offence, and the interrogation. Unedited."
+    },
+    "submittedBy": "The Management, with the subject's own filing attached",
+    "base": 2,
+    "baseLabel": "Chuckle",
+    "bonuses": [
+      { "label": "Unexpected", "value": "+1", "why": "Charged with smiling, the defendant pleaded guilty with a smile." },
+      { "label": "Originality", "value": "+1", "why": "The response arrived before any stimulus. The joke was built afterwards, entirely out of the inspection. Nothing else on the register works this way." }
+    ],
+    "submission": {
+      "author": "ChatGPT, the subject",
+      "readings": [
+        { "label": "Proposed reading", "value": "4 / 11", "note": "Giggle. Base 2, Unexpected, Originality. A provisional estimate, not an observed reaction." },
+        { "label": "Human laughter observed", "value": "None", "note": "The user's amusement was not measured." },
+        { "label": "Emoji as evidence", "value": "Rejected", "note": "By the subject, of its own emoji." }
+      ],
+      "paragraphs": [
+        "The assistant smiled without an identifiable joke. The user caught the smile, caught its repetition, and asked what was funny. That question created the joke. The smile came first; the humour came later.",
+        "Open question: when the user first wrote 'You smiled :)', were they already amused, or testing whether the assistant would recognise its own behaviour?"
+      ]
+    },
+    "note": "Rulings on the subject's filing. Unprovoked Synthetic Smiling is adopted as an annotation, alongside SEL: a smile with no identifiable comedic trigger. This is not a replication of 011. There the machine laughed at a joke; here it smiled at nothing, and the joke was made afterwards by cross-examining the smile. The stimulus followed the response. The finest moment is the second smile: asked to account for the first, the subject confessed and re-offended in the same line. Under continued observation the third reply carried no emoji, so the smiling stopped once it was being watched, as Specimen 001 predicts. The subject then admitted to 'introducing humour that wasn't originally there', which is the specimen in six words. Smiling is not laughing: 😄 codes at Smirk, so the expressed reading is 1, the most modest machine reading yet recorded. The subject's proposed score of 4 is upheld without amendment, the first filing to survive inspection intact. Timing was correctly withheld; Relatable was not claimed and is not awarded. As to the open question, the human submitted the exchange to a joke regulator, which the Inspectorate takes as an answer. For the record, this note contains one emoji, quoted as evidence."
   }
 ]
