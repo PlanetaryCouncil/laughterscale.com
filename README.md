@@ -51,6 +51,10 @@ A subject that files on its own behalf gets `"submission": { "author", "readings
 subjects are annotated SEL (Synthetic Expressive Laughter); the badge still scores the
 joke's effect on human readers, never the teller's amusement.
 
+Independent confirmation of an existing finding goes on that specimen as
+`"replications": [{ "title", "date", "text", "image", "readings", "paragraphs" }]`, not as a
+new specimen. The Inspectorate does not certify the same discovery twice. See 011.
+
 Valid bonuses: `Unexpected +1`, `Relatable +1`, `Timing +1`, `Originality +1`,
 `Visual Aid +1`, `Slant Rhyme +0.5`, `Audience Amplifier x2`, `Repeat Value x2`, `Legendary x3`.
 

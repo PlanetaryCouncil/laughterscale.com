@@ -80,6 +80,13 @@ const jokeCard = (joke) => {
           <dl class="readings">${joke.submission.readings.map((r) => `<div><dt>${esc(r.label)}</dt><dd><span>${esc(r.value)}</span> ${esc(r.note)}</dd></div>`).join('')}</dl>
           ${joke.submission.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}
         </aside>` : ''}
+        ${(joke.replications ?? []).map((r) => `<aside class="submission replication">
+          <div class="submission-head"><b>Replication.</b> ${esc(r.title)}, ${esc(r.date)}.</div>
+          <blockquote>${esc(r.text)}</blockquote>
+          ${exhibit(r.image)}
+          <dl class="readings">${r.readings.map((x) => `<div><dt>${esc(x.label)}</dt><dd><span>${esc(x.value)}</span> ${esc(x.note)}</dd></div>`).join('')}</dl>
+          ${r.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}
+        </aside>`).join('')}
         ${joke.response ? `<aside class="reply"><b>Right of reply.</b> ${esc(joke.response.author)}: &ldquo;${esc(joke.response.quote)}&rdquo; <a href="${esc(joke.response.url)}" rel="noopener">Read his full response</a>.</aside>` : ''}
         ${joke.disclaimer ? `<aside class="card-disclaimer">${esc(joke.disclaimer)}</aside>` : ''}
       </article>`;

@@ -418,6 +418,8 @@ blockquote {
 .readings dd { margin: 0; flex: 1 1 14rem; }
 .readings dd span { font-family: ui-sans-serif, system-ui, sans-serif; font-weight: 800; color: var(--ink); }
 .submission p { margin: 0.5rem 0 0; font-style: italic; }
+.replication p { font-style: normal; }
+.replication blockquote { margin: 0.7rem 0; font-size: 1rem; }
 
 .reply, .card-disclaimer {
   margin-top: 0.9rem;

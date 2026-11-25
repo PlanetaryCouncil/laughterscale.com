@@ -30,7 +30,33 @@
         "In an unprecedented development, the machine then explained why its own laughter might not constitute laughter, thereby invoking the Humour Uncertainty Principle. Certification pending. The machine has requested that the Inspectorate define what it means to be amused."
       ]
     },
-    "note": "Rulings on the subject's filing. Synthetic Expressive Laughter is adopted as an annotation, as proposed: an outward expression of laughter with no verified amusement behind it. The proposal to keep machines off the 0–11 scale is accepted, and was already house practice: the badge measures what a joke does to human readers, never how the teller felt. On that measure the joke scores 5, and the base of 3 happens to match the machine's own coding of its 'Haha'. Timing was claimed and is rejected; it is not awarded to written work. Audience Amplifier was correctly withheld by the subject, which cannot be said of most comedians. Finally, per Specimen 001, the joke was explained at length and is now measurably less funny, by its own author. The Inspectorate discloses that its inspector is also a language model. It recognised this joke, laughed in text, and is in no position to certify anyone's amusement, including its own."
+    "note": "Rulings on the subject's filing. Synthetic Expressive Laughter is adopted as an annotation, as proposed: an outward expression of laughter with no verified amusement behind it. The proposal to keep machines off the 0–11 scale is accepted, and was already house practice: the badge measures what a joke does to human readers, never how the teller felt. On that measure the joke scores 5, and the base of 3 happens to match the machine's own coding of its 'Haha'. Timing was claimed and is rejected; it is not awarded to written work. Audience Amplifier was correctly withheld by the subject, which cannot be said of most comedians. Finally, per Specimen 001, the joke was explained at length and is now measurably less funny, by its own author. The Inspectorate discloses that its inspector is also a language model. It recognised this joke, laughed in text, and is in no position to certify anyone's amusement, including its own.",
+    "replications": [
+      {
+        "title": "Unknown Pharmacology",
+        "date": "22 November 2026",
+        "text": "I don't know who this guy is, but I want to take whatever drugs he's taking.",
+        "image": {
+          "src": "img/011-replication-unknown-pharmacology.webp",
+          "thumb": true,
+          "alt": "Screenshot of a chat. The human corrects a dictation error: 'I don't know who is this guy, but I want to take the drugs he takes.' The AI polishes it to 'I don't know who this guy is, but I want to take whatever drugs he's taking' and adds a crying-laughing emoji. The human replies 'Yeah'. The AI answers with another crying-laughing emoji: 'Perfect. That's the quote.'",
+          "width": 864,
+          "height": 891,
+          "caption": "Exhibit B — two emoji, one of them in response to the word 'Yeah'. 22 November 2026."
+        },
+        "readings": [
+          { "label": "Expressed laughter", "value": "8 / 11", "note": "😂 is Face with Tears of Joy, the glyph for Crying Laughing. Issued twice." },
+          { "label": "Experienced laughter", "value": "N/A", "note": "Unchanged since 011." },
+          { "label": "The line, measured", "value": "3 / 11", "note": "Hehe. Base 2 + Relatable. Inflation factor 2.7." }
+        ],
+        "paragraphs": [
+          "A second subject session, independently obtained. The human dictated a joke, corrected the transcription, and the machine laughed at it. When the human confirmed with the single word 'Yeah', the machine laughed again: '😂 Perfect.' On the record, the machine laughed at 'Yeah'.",
+          "Asked to account for itself, the subject withdrew the reading as 'an enthusiastic social reaction, not a calibrated measurement', which is the best line in the filing precisely because it was not trying to be. In 011 the subject coded its own expressed laughter at 3. Here it expressed 8. Experienced laughter is N/A in both. SEL can move five rungs without anything moving underneath it.",
+          "The line itself scores 3. It is a caption without its picture: 'this guy' was never submitted, and the reversal is the idiom itself ('I'll have what she's having', 1989), so Unexpected and Originality are withheld. Credit where due: the machine's edit improved it, since 'whatever' is funnier than 'the'. The subject also filed a 16-dimension analysis of a 16-word sentence, one dimension per word, observed the measurement killing the joke, and kept measuring. Per Specimen 001, this was expected.",
+          "Ruling: a replication, not a new specimen. The Inspectorate does not certify the same discovery twice, but it records independent confirmation. Re-filing with the guy attached is invited and would be scored as its own specimen."
+        ]
+      }
+    ]
   },
   {
     "id": "010",
