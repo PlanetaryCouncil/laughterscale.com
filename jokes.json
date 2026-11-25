@@ -71,12 +71,46 @@
       { "label": "Repeat Value", "value": "x2", "why": "Testimony of The Management: the laugh returned reliably three days after the event, every time the tab was reopened. The first award of this multiplier." }
     ],
     "note": "The reference specimen for residual laughter, as predicted by the preservation law of Specimen 001: the LOLness was not destroyed, it went latent, and it comes back whenever the tab does. The Inspectorate further notes that PHP itself has been asked to resign for twenty-five years and has declined every time.",
-    "response": {
-      "author": "Joe Tidy",
-      "quote": "Every day is a school day",
-      "url": "https://www.instagram.com/p/De2MIlnqVMH/"
-    },
-    "disclaimer": "No one deserves to be bullied online. The Inspectorate measures the moment, not the man, who has said he intends to keep reporting on cyber for many years yet."
+    "response": [
+      {
+        "author": "Joe Tidy",
+        "quote": "Every day is a school day",
+        "url": "https://www.instagram.com/p/De2MIlnqVMH/"
+      },
+      {
+        "author": "Joe Tidy",
+        "where": "on LinkedIn",
+        "quote": "I am still just a reporter and I am learning every day.",
+        "url": "https://www.linkedin.com/posts/joe-tidy-1932764_i-am-not-and-have-never-claimed-to-be-activity-7519061391081803776-oaZi/",
+        "linkText": "Read his full statement"
+      }
+    ],
+    "disclaimer": "No one deserves to be bullied online. The Inspectorate measures the moment, not the man, who has said he intends to keep reporting on cyber for many years yet.",
+    "replications": [
+      {
+        "label": "Follow-up reading",
+        "title": "One month on",
+        "date": "25 November 2026",
+        "text": "After a month it still remains funny, just a little bit less funny.",
+        "image": {
+          "src": "img/010-linkedin-statement.webp",
+          "thumb": true,
+          "alt": "Screenshot of a LinkedIn post by Joe Tidy, BBC News Cyber Correspondent, saying he is not and has never claimed to be a coder or cyber security practitioner; cyber is his reporting beat, he is still just a reporter learning every day, and he thanks the cyber experts who helped him over the previous 48 hours. It quotes another user's post questioning whether he is qualified to be the BBC's cyber correspondent, noting PHP powers about 70% of the world's websites, over a BBC live-page screenshot captioned that he didn't know PHP existed until yesterday morning.",
+          "width": 810,
+          "height": 1488,
+          "caption": "Exhibit B — the subject's statement on LinkedIn, posted within 48 hours of the broadcast. Unedited."
+        },
+        "readings": [
+          { "label": "Residual laughter", "value": "Present", "note": "Still funny after a month. Field report, The Management." },
+          { "label": "Decay", "value": "Slight", "note": "Just a little bit less funny. The first decay curve on the register, and a gentle one." },
+          { "label": "Badge", "value": "Unchanged", "note": "The register records the specimen at its measured reading. 10 stands." }
+        ],
+        "paragraphs": [
+          "The first time a residual specimen has been re-measured. A month on the laugh still returns, slightly diminished. Residual laughter decays, but slowly, which is what the preservation law of Specimen 001 would lead one to expect: latent LOLness leaks out over time rather than all at once.",
+          "The subject's statement is entered as a second right of reply. It does not change the reading, because the joke was never the man; it was the distance between a job title and a three-letter language. Saying so plainly, and thanking the people who helped, is the correct response, and the Inspectorate records it as such."
+        ]
+      }
+    ]
   },
   {
     "id": "009",
@@ -146,7 +180,8 @@
       { "label": "Originality", "value": "+1", "why": "Bureaucratic framing applied to an observation everyone already agrees with." },
       { "label": "Unexpected", "value": "+1", "why": "'Void the warranty' arrives one clause later than you brace for." }
     ],
-    "note": "Filed without objection. Claims made against explained jokes will not be honoured."
+    "note": "Filed without objection. Claims made against explained jokes will not be honoured.",
+    "withdrawn": true
   },
   {
     "id": "004",
@@ -159,7 +194,8 @@
       { "label": "Originality", "value": "+1", "why": "The decay product is correctly identified. Puns really do become facts." },
       { "label": "Unexpected", "value": "+1", "why": "'Emit a groan' is doing physics and comedy in the same three words." }
     ],
-    "note": "Short, load-bearing, no wasted clause. The Inspectorate notes that this specimen has itself already decayed twice during review."
+    "note": "Short, load-bearing, no wasted clause. The Inspectorate notes that this specimen has itself already decayed twice during review.",
+    "withdrawn": true
   },
   {
     "id": "005",
@@ -172,7 +208,8 @@
       { "label": "Relatable", "value": "+1", "why": "Category C is a diagnosis, and the reader has been the patient." },
       { "label": "Originality", "value": "+1", "why": "The taxonomy is the joke. The third category is where it turns on you." }
     ],
-    "note": "The escalating-list structure is standard. The final item declining to be a joke at all is what earns the score."
+    "note": "The escalating-list structure is standard. The final item declining to be a joke at all is what earns the score.",
+    "withdrawn": true
   },
   {
     "id": "006",
@@ -185,7 +222,8 @@
       { "label": "Originality", "value": "+1", "why": "The first half is inherited. The second half is the contribution, and it is a real one." },
       { "label": "Unexpected", "value": "+1", "why": "Time and timing are one letter and an entire career apart." }
     ],
-    "note": "The Inspectorate acknowledges the opening clause is not original and has elected not to penalise it, on the grounds that the reversal could not exist without it."
+    "note": "The Inspectorate acknowledges the opening clause is not original and has elected not to penalise it, on the grounds that the reversal could not exist without it.",
+    "withdrawn": true
   },
   {
     "id": "008",
@@ -220,7 +258,8 @@
       { "label": "Originality", "value": "+1", "why": "Four layers of meta held together by a bird with reading glasses." },
       { "label": "Unexpected", "value": "+1", "why": "The mug. Every time, the mug." }
     ],
-    "note": "Certifying nonexistent things through a nonexistent agency is the founding act of this institution. Specimen 007 is therefore both evidence and jurisdiction."
+    "note": "Certifying nonexistent things through a nonexistent agency is the founding act of this institution. Specimen 007 is therefore both evidence and jurisdiction.",
+    "withdrawn": true
   },
   {
     "id": "012",

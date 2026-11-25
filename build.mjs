@@ -55,9 +55,10 @@ const jokeCard = (joke) => {
     )
     .join('\n          ');
 
-  return `<article class="specimen" style="--rung:${rung.color}">
+  const designation = joke.withdrawn ? 'Withdrawn' : joke.designation;
+  return `<article class="specimen${joke.withdrawn ? ' withdrawn' : ''}" style="--rung:${rung.color}">
         <header class="specimen-head">
-          <div class="specimen-id">Specimen ${esc(joke.id)}${joke.designation ? ` <span class="designation">${esc(joke.designation)}</span>` : ''}</div>
+          <div class="specimen-id">Specimen ${esc(joke.id)}${designation ? ` <span class="designation">${esc(designation)}</span>` : ''}</div>
           <h3>${esc(joke.title)}</h3>
         </header>
         <blockquote>${esc(joke.text)}</blockquote>
@@ -72,6 +73,7 @@ const jokeCard = (joke) => {
             <div class="math">Base <b>${esc(joke.base)}</b> <span class="dim">(${esc(joke.baseLabel)})</span></div>
             ${adds ? `<ul class="bonuses">\n          ${adds}\n          </ul>` : '<div class="dim">No bonuses awarded.</div>'}
             ${capped ? `<div class="ceiling">Raw reading ${esc(formula)} = <b>${esc(raw)}</b>. The needle stops at ${ceiling}${ceiling < 11 ? '; position 11 requires Legendary status' : ''}.</div>` : ''}
+            ${joke.withdrawn ? '<div class="ceiling">Original reading, self-assessed by the machine that wrote the joke. Not certified.</div>' : ''}
           </div>
         </div>
         <footer class="note"><b>Inspector's note.</b> ${esc(joke.note)}</footer>
@@ -81,29 +83,31 @@ const jokeCard = (joke) => {
           ${joke.submission.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}
         </aside>` : ''}
         ${(joke.replications ?? []).map((r) => `<aside class="submission replication">
-          <div class="submission-head"><b>Replication.</b> ${esc(r.title)}, ${esc(r.date)}.</div>
+          <div class="submission-head"><b>${esc(r.label ?? 'Replication')}.</b> ${esc(r.title)}, ${esc(r.date)}.</div>
           <blockquote>${esc(r.text)}</blockquote>
           ${exhibit(r.image)}
           <dl class="readings">${r.readings.map((x) => `<div><dt>${esc(x.label)}</dt><dd><span>${esc(x.value)}</span> ${esc(x.note)}</dd></div>`).join('')}</dl>
           ${r.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}
         </aside>`).join('')}
-        ${joke.response ? `<aside class="reply"><b>Right of reply.</b> ${esc(joke.response.author)}: &ldquo;${esc(joke.response.quote)}&rdquo; <a href="${esc(joke.response.url)}" rel="noopener">Read his full response</a>.</aside>` : ''}
+        ${[].concat(joke.response ?? []).map((r) => `<aside class="reply"><b>Right of reply.</b> ${esc(r.author)}${r.where ? `, ${esc(r.where)}` : ''}: &ldquo;${esc(r.quote)}&rdquo; <a href="${esc(r.url)}" rel="noopener">${esc(r.linkText ?? 'Read his full response')}</a>.</aside>`).join('\n        ')}
         ${joke.disclaimer ? `<aside class="card-disclaimer">${esc(joke.disclaimer)}</aside>` : ''}
       </article>`;
 };
 
 const jokes = JSON.parse(readFileSync(new URL('./jokes.json', import.meta.url), 'utf8'));
-const ranked = [...jokes].sort((a, b) => score(b).final - score(a).final || score(b).raw - score(a).raw);
+const rank = (list) => [...list].sort((a, b) => score(b).final - score(a).final || score(b).raw - score(a).raw);
+const ranked = rank(jokes.filter((j) => !j.withdrawn));
+const synthetic = rank(jokes.filter((j) => j.withdrawn));
 const best = score(ranked[0]).final;
 const holder = ranked.find((j) => score(j).final === 11);
 
-const html = `<!doctype html>
+const page = ({ title, description, body }) => `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>LaughterScale — Measure the impact. Feel the effect.</title>
-<meta name="description" content="An independent laboratory for comedic performance. Jokes measured 0 to 11, certified by the Joke Regulation Authority, Inspectorate of Satire.">
+<title>${title}</title>
+<meta name="description" content="${description}">
 <meta property="og:title" content="LaughterScale">
 <meta property="og:description" content="Jokes, measured 0 to 11. Officially absurd.">
 <meta property="og:type" content="website">
@@ -113,12 +117,44 @@ const html = `<!doctype html>
 <body>
 <div class="glow"></div>
 <main>
+${body}
+  <footer class="disclaimer">
+    <p><b>Disclaimer.</b> The Joke Regulation Authority, the Inspectorate of Satire, and Prof. F. L. Amingo, Ph.D. are fictitious entities created for satirical purposes. Any resemblance to real organisations is either coincidental, intentional, or hilariously inevitable.</p>
+    <p class="creed">Laugh freely. Question everything. Scale responsibly.</p>
+  </footer>
 
+</main>
+<dialog class="lightbox" aria-label="Exhibit">
+  <form method="dialog"><button class="lightbox-close" aria-label="Close">&times;</button></form>
+  <img alt="">
+</dialog>
+<script>
+  const box = document.querySelector('.lightbox');
+  const full = box.querySelector('img');
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('[data-lightbox]');
+    if (!link || !box.showModal) return;
+    e.preventDefault();
+    const thumb = link.querySelector('img');
+    full.src = link.href;
+    full.alt = thumb.alt;
+    box.showModal();
+  });
+  box.addEventListener('click', (e) => { if (e.target === box || e.target === full) box.close(); });
+</script>
+</body>
+</html>
+`;
+
+const home = page({
+  title: 'LaughterScale — Measure the impact. Feel the effect.',
+  description: 'An independent laboratory for comedic performance. Jokes measured 0 to 11, certified by the Joke Regulation Authority, Inspectorate of Satire.',
+  body: `
   <header class="masthead">
     <p class="eyebrow">Independent Laboratory for Comedic Performance</p>
     <h1>The Laughter Scale</h1>
     <p class="tagline">Measure the impact. Feel the effect.</p>
-    <p class="stamp">${jokes.length} specimens certified &middot; highest reading ${best} LOL units${best < 11 ? ' &middot; position 11 remains vacant' : ''}</p>
+    <p class="stamp">${ranked.length} specimens certified &middot; highest reading ${best} LOL units${best < 11 ? ' &middot; position 11 remains vacant' : ''}</p>
   </header>
 
   <section class="scale" aria-label="The scale, 0 to 11">
@@ -152,6 +188,7 @@ const html = `<!doctype html>
     <div class="specimens">
       ${ranked.map(jokeCard).join('\n      ')}
     </div>
+    ${synthetic.length ? `<p class="annex-link"><a href="synthetic.html">Annex: ${synthetic.length} synthetic attempts</a> <span class="dim">Jokes written by AI, withdrawn from the register.</span></p>` : ''}
   </section>
 
   <section class="vacancy">
@@ -163,34 +200,32 @@ const html = `<!doctype html>
     <p>No specimen has yet achieved <b>He Ran Out Of Oxygen And Died</b>. The Inspectorate does not expect to fill this position and is not accepting speculative applications.</p>`}
     <p class="dim">Submissions: <a href="mailto:jokes@laughterscale.com">jokes@laughterscale.com</a></p>
   </section>
+`,
+});
 
-  <footer class="disclaimer">
-    <p><b>Disclaimer.</b> The Joke Regulation Authority, the Inspectorate of Satire, and Prof. F. L. Amingo, Ph.D. are fictitious entities created for satirical purposes. Any resemblance to real organisations is either coincidental, intentional, or hilariously inevitable.</p>
-    <p class="creed">Laugh freely. Question everything. Scale responsibly.</p>
-  </footer>
+const annex = page({
+  title: 'Synthetic Attempts — LaughterScale',
+  description: 'Jokes written by AI, scored by the same AI, and withdrawn from the LaughterScale register.',
+  body: `
+  <header class="masthead">
+    <p class="eyebrow"><a href="./">The Laughter Scale</a> &middot; Annex</p>
+    <h1>Synthetic Attempts</h1>
+    <p class="tagline">Fake jokes, generated by AI.</p>
+    <p class="stamp">${synthetic.length} specimens withdrawn &middot; certified readings 0</p>
+  </header>
 
-</main>
-<dialog class="lightbox" aria-label="Exhibit">
-  <form method="dialog"><button class="lightbox-close" aria-label="Close">&times;</button></form>
-  <img alt="">
-</dialog>
-<script>
-  const box = document.querySelector('.lightbox');
-  const full = box.querySelector('img');
-  document.addEventListener('click', (e) => {
-    const link = e.target.closest('[data-lightbox]');
-    if (!link || !box.showModal) return;
-    e.preventDefault();
-    const thumb = link.querySelector('img');
-    full.src = link.href;
-    full.alt = thumb.alt;
-    box.showModal();
-  });
-  box.addEventListener('click', (e) => { if (e.target === box || e.target === full) box.close(); });
-</script>
-</body>
-</html>
-`;
+  <section class="register">
+    <h2>Notice of withdrawal</h2>
+    <p class="lede">These specimens were written by the Inspectorate's own instrument, a language model, which then scored them itself and awarded 6s and 7s. On review the Management ruled: <i>&ldquo;AI trying to simulate why something could be funny doesn't work.&rdquo;</i></p>
+    <p class="lede">The Inspectorate concurs. A joke built to resemble a joke can carry every mechanism on the bonus sheet and still not make anyone laugh, and a machine that wrote a joke and marked it has no business certifying either. Compare Specimens 011 and 012, where the machine is the subject rather than the author. The specimens are kept below as the record, with their original self-assessed readings. None of them counts.</p>
+    <div class="specimens">
+      ${synthetic.map(jokeCard).join('\n      ')}
+    </div>
+    <p class="annex-link"><a href="./">Back to the register</a></p>
+  </section>
+`,
+});
 
-writeFileSync(new URL('./index.html', import.meta.url), html);
-console.log(`Built index.html — ${jokes.length} specimens, top reading ${best}.`);
+writeFileSync(new URL('./index.html', import.meta.url), home);
+writeFileSync(new URL('./synthetic.html', import.meta.url), annex);
+console.log(`Built index.html — ${ranked.length} certified, top reading ${best}; synthetic.html — ${synthetic.length} withdrawn.`);

@@ -9,7 +9,7 @@ Joke Regulation Authority, Inspectorate of Satire (fictitious, satirical).
 | --- | --- |
 | `jokes.json` | The corpus. The only file you edit to publish a joke. |
 | `build.mjs` | Generates `index.html` from `jokes.json`. No dependencies. |
-| `index.html` | Generated output. Committed, so the folder deploys as-is. |
+| `index.html`, `synthetic.html` | Generated output. Committed, so the folder deploys as-is. |
 | `styles.css` | Hand-written, no build step. |
 
 ## Publishing a joke
@@ -44,7 +44,8 @@ under the joke. Images live in `img/`, named after the specimen id. Add `"thumb"
 for a cropped thumbnail that opens in a lightbox (use it for tall screenshots).
 
 Specimens about real people get `"response": { "author", "quote", "url" }` (their own
-words, linked) and a `"disclaimer"`. See 010.
+words, linked; optional `"where"`, `"linkText"`; an array for several) and a `"disclaimer"`.
+See 010.
 
 A subject that files on its own behalf gets `"submission": { "author", "readings":
 [{ "label", "value", "note" }], "paragraphs" }`, rendered verbatim. See 011. Machine
@@ -53,7 +54,12 @@ joke's effect on human readers, never the teller's amusement.
 
 Independent confirmation of an existing finding goes on that specimen as
 `"replications": [{ "title", "date", "text", "image", "readings", "paragraphs" }]`, not as a
-new specimen. The Inspectorate does not certify the same discovery twice. See 011.
+new specimen. The Inspectorate does not certify the same discovery twice. See 011. An optional
+`"label"` renames the block, e.g. `"Follow-up reading"` for a re-measurement over time (010).
+
+`"withdrawn": true` moves a specimen off the register onto `synthetic.html`, the annex of
+jokes written by AI and self-scored. They stay on file, uncounted. Jokes the inspector writes
+itself are never certified.
 
 Valid bonuses: `Unexpected +1`, `Relatable +1`, `Timing +1`, `Originality +1`,
 `Visual Aid +1`, `Slant Rhyme +0.5`, `Audience Amplifier x2`, `Repeat Value x2`, `Legendary x3`.
@@ -86,7 +92,5 @@ python3 -m http.server 8000
 
 ## Deploy
 
-Static — no server needed. Point the domain at the folder via Cloudflare Pages, Netlify,
-Vercel, or GitHub Pages. Build command `node build.mjs`, output directory `.`.
-
-Not currently a git repository. `git init` before wiring up a host.
+GitHub Pages from `main` at `/`, behind Cloudflare. Run `node build.mjs`, commit the
+generated HTML, push.
