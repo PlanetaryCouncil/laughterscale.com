@@ -43,6 +43,10 @@ Optional `"image": { "src", "alt", "width", "height", "caption" }` renders an ex
 under the joke. Images live in `img/`, named after the specimen id. Add `"thumb": true`
 for a cropped thumbnail that opens in a lightbox (use it for tall screenshots).
 
+Non-English specimens keep the original in `"text"` with `"lang"` (e.g. `"pl"`) and add an
+English `"translation"`. See 013. A submission may carry `"images"` (exhibits, same shape as
+`"image"`).
+
 Specimens about real people get `"response": { "author", "quote", "url" }` (their own
 words, linked; optional `"where"`, `"linkText"`; an array for several) and a `"disclaimer"`.
 See 010.

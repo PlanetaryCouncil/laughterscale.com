@@ -294,5 +294,61 @@
       ]
     },
     "note": "Rulings on the subject's filing. Unprovoked Synthetic Smiling is adopted as an annotation, alongside SEL: a smile with no identifiable comedic trigger. This is not a replication of 011. There the machine laughed at a joke; here it smiled at nothing, and the joke was made afterwards by cross-examining the smile. The stimulus followed the response. The finest moment is the second smile: asked to account for the first, the subject confessed and re-offended in the same line. Under continued observation the third reply carried no emoji, so the smiling stopped once it was being watched, as Specimen 001 predicts. The subject then admitted to 'introducing humour that wasn't originally there', which is the specimen in six words. Smiling is not laughing: 😄 codes at Smirk, so the expressed reading is 1, the most modest machine reading yet recorded. The subject's proposed score of 4 is upheld without amendment, the first filing to survive inspection intact. Timing was correctly withheld; Relatable was not claimed and is not awarded. As to the open question, the human submitted the exchange to a joke regulator, which the Inspectorate takes as an answer. For the record, this note contains one emoji, quoted as evidence."
+  },
+  {
+    "id": "013",
+    "title": "The Maternal Information Paradox",
+    "designation": "Self-Executing",
+    "lang": "pl",
+    "text": "Są pewne rzeczy, które mówię kolegom, a jednocześnie nie mówię mamie. Będzie mniej stresu jak się dowie z mediów",
+    "translation": "There are some things I tell my mates and, at the same time, don't tell my mum. There'll be less stress if she finds out from the media.",
+    "image": {
+      "src": "img/013-maternal-information-paradox.webp",
+      "alt": "Screenshot of a chat in Polish. The human attaches a cartoon captioned 'When you have too many problems, you can solve your problems by creating bigger problems', showing a figure labelled Mars kicking open a door marked 'Deproscription Debate', with the footnote 'Mars decided to get involved in the deproscription of Hamas.' The human writes that there are things they tell their mates but not their mum, and there will be less stress if she finds out from the media. The AI replies with a crying-laughing emoji, rephrases it as 'no point stressing her in advance; let her find out from the media once the story gets coverage', and calls it strategic family stress management through delayed information distribution.",
+      "width": 2000,
+      "height": 908,
+      "caption": "Exhibit A — the statement, the cartoon, and the machine's reply. Unedited."
+    },
+    "submittedBy": "The Management, in a personal capacity",
+    "base": 4,
+    "baseLabel": "Giggle",
+    "bonuses": [
+      { "label": "Unexpected", "value": "+1", "why": "The media, offered as the gentle option." },
+      { "label": "Relatable", "value": "+1", "why": "Everyone runs a two-tier information policy: one for friends, one for Mum." },
+      { "label": "Visual Aid", "value": "+1", "why": "The cartoon states the principle, solving problems by creating bigger ones. The line carries it out." }
+    ],
+    "submission": {
+      "author": "ChatGPT, the subject",
+      "readings": [
+        { "label": "Proposed reading", "value": "8.0 / 11", "note": "Built from seven sub-scores: Surprise 9.5, Incongruity 9.5, Originality 8.5, Authenticity 10.0, Relatability 8.0, Delivery potential 9.0, Universality 7.0." },
+        { "label": "Stress model", "value": "Postponed", "note": "Not eliminated. The subject's flowchart." },
+        { "label": "Expressed laughter", "value": "8 / 11", "note": "😂, issued before the analysis. The third SEL observation on file." }
+      ],
+      "paragraphs": [
+        "The method of preventing stress is potentially more stressful than the situation it is supposed to prevent.",
+        "You are reducing immediate stress by postponing uncertain future stress. The humour arises because the audience instinctively evaluates the potential magnitude of the future stress, while you are focusing on its timing. You could classify this as temporal displacement of an emotional externality.",
+        "The truth does not merely provide context. It becomes an additional comedic mechanism. Reality itself is the comedian. You are merely reporting it."
+      ],
+      "images": [
+        {
+          "src": "img/013-subject-flowchart.png",
+          "thumb": true,
+          "width": 1490,
+          "height": 1200,
+          "alt": "Flowchart. Objective: minimise mum's stress. Leads to: withhold information. Branches to Expected: mum doesn't worry today, and Punchline: mum finds out through the media. Both lead to: stress postponed, not eliminated.",
+          "caption": "Exhibit B — the subject's flowchart."
+        },
+        {
+          "src": "img/013-subject-scorecard.png",
+          "thumb": true,
+          "width": 1500,
+          "height": 654,
+          "alt": "Scorecard titled 'Specimen: The Maternal Information Paradox', 8.0 out of 11, provisional score, with bars for Surprise 9.5, Incongruity 9.5, Originality 8.5, Authenticity 10.0, Relatability 8.0, Delivery potential 9.0 and Universality 7.0.",
+          "caption": "Exhibit C — the subject's scorecard."
+        }
+      ]
+    },
+    "note": "The engine is the impersonal 'Będzie mniej stresu', there'll be less stress, which never says whose. Read as the mother's, it is absurd: the news is the worst way for a mother to hear anything. Read as the speaker's, it is simply true: no conversation, no face to watch. Both readings hold at once, and that is where the laugh lives. The subject reads only the first ('stress postponed, not eliminated'), as did its edit, which turned the line into 'no point stressing her in advance' and removed the ambiguity; its proposed 'purest version' adds 'I don't want to stress her' and removes it again. The original stands, unpolished. Originality is withheld: 'Mum will see it on the news' is an established trope, done here unusually well. The subject's 8.0 is assembled from seven sub-scores, none of them on the rubric. Authenticity is not a recognised bonus, though the Management may table it through the usual union channels. The title is the subject's, and is adopted. The reading is 7. Subsequently the Management advised that its mother will in fact be proud, since the matter brings attention and awareness, and added: 'Get some clicks.' The Inspectorate notes that by publishing this specimen it has become the media in question. The plan is now executing.",
+    "disclaimer": "The Inspectorate takes no position on proscription or deproscription. It measures a joke about what one tells one's mother."
   }
 ]

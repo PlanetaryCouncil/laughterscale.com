@@ -61,7 +61,8 @@ const jokeCard = (joke) => {
           <div class="specimen-id">Specimen ${esc(joke.id)}${designation ? ` <span class="designation">${esc(designation)}</span>` : ''}</div>
           <h3>${esc(joke.title)}</h3>
         </header>
-        <blockquote>${esc(joke.text)}</blockquote>
+        <blockquote${joke.lang ? ` lang="${esc(joke.lang)}"` : ''}>${esc(joke.text)}</blockquote>
+        ${joke.translation ? `<p class="translation"><span class="dim">Translation.</span> ${esc(joke.translation)}</p>` : ''}
         ${exhibit(joke.image)}
         <div class="attrib">Submitted by ${esc(joke.submittedBy)}</div>
         <div class="verdict">
@@ -81,6 +82,7 @@ const jokeCard = (joke) => {
           <div class="submission-head"><b>Subject's own submission.</b> Filed by ${esc(joke.submission.author)}.</div>
           <dl class="readings">${joke.submission.readings.map((r) => `<div><dt>${esc(r.label)}</dt><dd><span>${esc(r.value)}</span> ${esc(r.note)}</dd></div>`).join('')}</dl>
           ${joke.submission.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}
+          ${(joke.submission.images ?? []).map(exhibit).join('')}
         </aside>` : ''}
         ${(joke.replications ?? []).map((r) => `<aside class="submission replication">
           <div class="submission-head"><b>${esc(r.label ?? 'Replication')}.</b> ${esc(r.title)}, ${esc(r.date)}.</div>

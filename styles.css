@@ -509,3 +509,5 @@ blockquote {
 .specimen.withdrawn .badge { opacity: 0.55; }
 .specimen.withdrawn .badge-num { text-decoration: line-through; text-decoration-thickness: 2px; }
 .lede:has(+ .lede) { margin-bottom: 0.8rem; }
+.translation { margin: -0.4rem 0 1rem; font-size: 0.92rem; line-height: 1.55; color: #c9bfb2; font-style: italic; }
+.translation .dim { font-style: normal; }
