@@ -350,5 +350,59 @@
     },
     "note": "The engine is the impersonal 'Będzie mniej stresu', there'll be less stress, which never says whose. Read as the mother's, it is absurd: the news is the worst way for a mother to hear anything. Read as the speaker's, it is simply true: no conversation, no face to watch. Both readings hold at once, and that is where the laugh lives. The subject reads only the first ('stress postponed, not eliminated'), as did its edit, which turned the line into 'no point stressing her in advance' and removed the ambiguity; its proposed 'purest version' adds 'I don't want to stress her' and removes it again. The original stands, unpolished. Originality is withheld: 'Mum will see it on the news' is an established trope, done here unusually well. The subject's 8.0 is assembled from seven sub-scores, none of them on the rubric. Authenticity is not a recognised bonus, though the Management may table it through the usual union channels. The title is the subject's, and is adopted. The reading is 7. Subsequently the Management advised that its mother will in fact be proud, since the matter brings attention and awareness, and added: 'Get some clicks.' The Inspectorate notes that by publishing this specimen it has become the media in question. The plan is now executing.",
     "disclaimer": "The Inspectorate takes no position on proscription or deproscription. It measures a joke about what one tells one's mother."
+  },
+  {
+    "id": "014",
+    "title": "The Dropped Standard",
+    "text": "Standards dropped and increased.",
+    "image": {
+      "src": "img/014-dropped-standard.png",
+      "thumb": true,
+      "alt": "Screenshot of a chat. The human shares an Instagram post by beauthrows: a thrower in a USA kit over the heading LA28 Entry Standards, with a table of throws standards, and the caption \"The 2028 LA Olympic Entry Standards Have Dropped\", noting that 40% of athletes are expected to qualify through entry standards and 60% through world rankings. The human writes \"Standards dropped and increased\". The AI replies \"The standards dropped, but the standards went up\" with a crying-laughing emoji, calls it a beautiful linguistic paradox, glosses dropped as released and increased as the distances becoming greater, and concludes \"The standards dropped. The bar was raised.\"",
+      "width": 1179,
+      "height": 2556,
+      "caption": "Exhibit A — the post by @beauthrows, the caption, and the machine’s reply. Unedited."
+    },
+    "submittedBy": "The Management",
+    "base": 3,
+    "baseLabel": "Hehe",
+    "bonuses": [
+      {
+        "label": "Unexpected",
+        "value": "+1",
+        "why": "Two opposite directions in one sentence, both correct. The brain files a contradiction and then has to withdraw it."
+      },
+      {
+        "label": "Visual Aid",
+        "value": "+1",
+        "why": "The post supplies the set-up (‘Have Dropped’) and the table supplies the evidence. Four words of caption do the rest."
+      }
+    ],
+    "submission": {
+      "author": "ChatGPT, the subject",
+      "readings": [
+        {
+          "label": "Proposed reading",
+          "value": "None",
+          "note": "Six dimensions out of 10: Linguistic cleverness 9, Brevity 10, Paradoxical elegance 9, Accessibility 8, Laugh-out-loud potential 5, Intellectual amusement 9. None of them is on the rubric."
+        },
+        {
+          "label": "Expressed laughter",
+          "value": "8 / 11",
+          "note": "😂, issued before the analysis. The fourth SEL observation on file."
+        },
+        {
+          "label": "Paradox status",
+          "value": "Withdrawn",
+          "note": "By the subject: ‘a linguistic illusion of contradiction’."
+        }
+      ],
+      "paragraphs": [
+        "‘Dropped’ and ‘increased’ are ordinarily directional opposites. Both statements can be true because ‘dropped’ changes meaning: published, and more demanding. The brain encounters a contradiction and then resolves it, a classic incongruity-resolution mechanism.",
+        "In athletics, where distances, heights and measurable performance are fundamental, the directional ambiguity becomes particularly appropriate.",
+        "The funniest element is that you don’t need to manufacture absurdity. You simply observe language contradicting itself on the surface while remaining perfectly coherent underneath."
+      ]
+    },
+    "note": "A caption, not a composition: the poster said ‘Have Dropped’ and the Management read the table. The pun on ‘drop’ as ‘release’ is well worn (albums, trailers and price rises all drop), so Originality is withheld; four words and no padding is good economy, which the rubric does not reward separately. The subject’s analysis is sound and its scores generous: 9/10 for cleverness sits beside 5/10 for laughing out loud, and only the second is what this instrument measures. Its own line, ‘The standards dropped. The bar was raised’, is the better-polished version, and it is not the submission. The Inspectorate then checked the subject’s claim that ‘the distances required to qualify became greater’ against the Paris 2024 throws standards. It is half right. Three went up (women’s shot put 18.80 → 19.30, women’s discus 64.50 → 65.00, men’s hammer 78.20 → 78.50) and four are unchanged. Women’s javelin went from 64.00 to 63.80. One standard dropped. The sentence is true in all three senses, which no one, including its author, intended. The finding is recorded; it was found by inspection, not by the joke, so it does not move the score. The reading is 5."
   }
 ]
